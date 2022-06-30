@@ -1,3 +1,3 @@
-# Gopopn
+# Gopon
 
 Share your secret data safely
