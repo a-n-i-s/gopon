@@ -1,2 +1,4 @@
 Django==4.0.5
 python-decouple==3.6
+whitenoise
+gunicorn
