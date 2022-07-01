@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from ctypes import cast
 from pathlib import Path
 from decouple import config
+import dj_database_url
+
+db=dj_database_url.config(conn_max_age=500)
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -84,7 +88,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+DATABASES['default'].update(db)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
